@@ -1,0 +1,62 @@
+\documentclass{beamer}
+\usepackage{ngerman}
+\usepackage[utf8]{inputenc}
+% Designelemente
+\usetheme{Boadilla}
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{frametitle}
+{%
+\vspace{-0.165ex}
+
+\begin{beamercolorbox}[wd=\paperwidth,dp=1ex, ht=4.5ex, sep=0.5ex,
+    colsep*=0pt]{frametitle}
+  \usebeamerfont{frametitle}   \strut \insertframetitle  \hfill 
+  \raisebox{0ex}[0pt][-\ht\strutbox ]{
+    \begin{minipage}[b]{.4\textwidth}\raggedleft \tiny Leipzig Open Data
+      Initiative\\ Gefördert von der Stadt Leipzig
+  \end{minipage}}
+\end{beamercolorbox}%
+}%
+
+\title[Eventsframework]{Teilprojekt Eventsframework}
+
+\subtitle{Bericht zum Abschlusstreffen des Projekts\\ „Leipzig Open Data
+  Initiative“}
+
+\author[Nareike]{Andreas Nareike}
+
+\institute[Uni Leipzig]{Leipzig Open Data Team\\
+  \texttt{http://leipzig-data.de}} 
+
+\date{Leipzig, 26. April 2013}
+\begin{document}
+\begin{frame}
+\maketitle
+\end{frame}
+\begin{frame}{Hintergrund}{}
+
+Teilprojekt, das sich im Sinne von Open Innovation in der Arbeit nach der
+Ideenbörse herauskristallisiert hat
+\begin{itemize} 
+\item \textbf{Zielstellung:} Infrastruktur aufbauen, in die Event-Daten in
+  einheitlichem Format aus verschiedenen Quellen und von verschiedenen Akteuren
+  eingespeist werden und der Allgemeinheit zum Gebrauch zur Verfügung stehen. 
+\item \textbf{Partner:} API-Leipzig, city-cult, MINT-Netzwerk Leipzig, Netzwerk
+  Energie \& Umwelt
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Erreichte Ergebnisse}{}
+\begin{itemize} 
+\item Prototypische Lösung auf der Basis des Exhibit-Frameworks
+  (\url{http://www.leipzig-data.de/widget/})
+\item Synergien aus dem Teilprojekt Gelbe Seiten (Daten von Orten, Trägern,
+  Adressen und Geokoordinaten)
+\item Etablierte Kanäle zum MINT-Netzwerk Leipzig und zum Netzwerk Energie \&
+  Umwelt $\to$ wöchentliches Update
+\item Bereitstellung einer Datenschnittstelle (SPARQL,
+  \url{http://www.leipzig-data.de/widget/sparql.php}) sowie einer Schnittstelle
+  mittels API-Leipzig $\to$ Nutzung durch city:cult (Smartphone App)
+\end{itemize}
+\end{frame}
+\end{document}

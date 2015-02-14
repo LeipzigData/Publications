@@ -1,0 +1,88 @@
+\documentclass{beamer}
+\usepackage{ngerman}
+\usepackage[utf8]{inputenc}
+% Designelemente
+\usetheme{Boadilla}
+\beamertemplatenavigationsymbolsempty
+
+\newenvironment{code}{\footnotesize\tt \begin{tabbing}
+\hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip5cm\=\hskip5cm\=\kill}
+{\end{tabbing}}
+
+\setbeamertemplate{frametitle}{%
+\vspace{-0.165ex}
+
+\begin{beamercolorbox}[wd=\paperwidth,dp=1ex, ht=4.5ex, sep=0.5ex,
+    colsep*=0pt]{frametitle}
+  \usebeamerfont{frametitle}   \strut \insertframetitle  \hfill 
+  \raisebox{0ex}[0pt][-\ht\strutbox ]{
+    \begin{minipage}[b]{.4\textwidth}\raggedleft \tiny Leipzig Open Data
+      Initiative\\ Gefördert von der Stadt Leipzig
+  \end{minipage}}
+\end{beamercolorbox}%
+}%
+
+\title[Gelbe Seiten]{Teilprojekt Gelbe Seiten}
+
+\subtitle{Bericht zum Abschlusstreffen des Projekts\\ „Leipzig Open Data
+  Initiative“}
+
+\author[Gräbe]{Prof. Dr. Hans-Gert Gräbe}
+
+\institute[Uni Leipzig]{Leipzig Open Data Team\\
+  \texttt{http://leipzig-data.de}} 
+
+\date{Leipzig, 26. April 2013}
+\begin{document}
+\begin{frame}
+\maketitle
+\end{frame}
+\begin{frame}{Vorhaben (Ergebnis Ideenbörse)}{}
+\begin{itemize} 
+\item \textbf{Zielstellung:} Aufbau eines Systems \emph{gelber Seiten} für die
+  Stadt Leipzig, um Akteure überhaupt namentlich benennen zu können.
+\item \textbf{öffentlich:} Aufbau und Fortentwicklung eines Datenbestands
+  dieser Akteure sowie allgemein anerkannter Informationen zu diesen in
+  Verantwortung der Leipziger Initiative für Offene Daten. 
+\item \textbf{privat:} Anreicherung dieser Informationen um private Ansichten
+  und Wertungen zu regionalen Prozessen und Entwicklungen in privater
+  Verantwortung.
+\item \textbf{Bezugspunkte} in der bisherigen Diskussion: API Leipzig
+  (Medienhandbuch), Zukunftsakademie (Werner Stickler), MINT-Netzwerk Leipzig
+  (Prof. H.-G. Gräbe), Branchenbuch Energie und Umwelttechnik des Netzwerks
+  Energie und Umwelt, Vereinsdatenbank der Stadt Leipzig, sportinleipzig.de 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ergebnisse}{}
+
+Beispielanfrage nach Beschreibungen von MINT-Orten\\ (Quelle: Projekt
+Jugendstadtplan) 
+
+\begin{code}
+  PREFIX ldtag: <http://leipzig-data.de/Data/Tag/>\\
+  PREFIX ld: <http://leipzig-data.de/Data/Model/>\\
+  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema\#>\\
+  SELECT ?l ?k WHERE \{\+\\
+    ?p ld:hasTag ldtag:MINT .\\
+    ?p a ld:Ort .\\
+    ?p rdfs:label ?l .\\
+    ?p ld:Kurzinformation ?k .\-\\
+  \}
+\end{code}
+\end{frame}
+
+\begin{frame}{Ergebnisse}{}
+\begin{itemize} 
+\item Konzeptionelle Konsolidierung der Grundschemata
+\begin{itemize} 
+\item Aktivitätsebene: Orte, Träger, Personen
+\item Angebotsebene: Orte, Projekte, Angebote, Events
+\end{itemize}
+\item Aufsetzen eines Ergänzungs- und Qualifizierungsprozesses des
+  Datenbestands im Kontext des Teilprojekts \emph{LD.Events}.
+\item Übernahme und Einbindung ausgewählter Datenbestände von Partnern (Hosts
+  und Venues von API Leipzig, Daten aus dem Kontext des MINT-Netzwerks). 
+\end{itemize}
+\end{frame}
+\end{document}

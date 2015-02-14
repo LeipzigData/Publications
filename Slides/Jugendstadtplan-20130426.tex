@@ -1,0 +1,65 @@
+\documentclass{beamer}
+\usepackage{ngerman}
+\usepackage[utf8]{inputenc}
+% Designelemente
+\usetheme{Boadilla}
+\beamertemplatenavigationsymbolsempty
+
+\newenvironment{code}{\footnotesize\tt \begin{tabbing}
+\hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip5cm\=\hskip5cm\=\kill}
+{\end{tabbing}}
+
+\setbeamertemplate{frametitle}{%
+\vspace{-0.165ex}
+
+\begin{beamercolorbox}[wd=\paperwidth,dp=1ex, ht=4.5ex, sep=0.5ex,
+    colsep*=0pt]{frametitle}
+  \usebeamerfont{frametitle}   \strut \insertframetitle  \hfill 
+  \raisebox{0ex}[0pt][-\ht\strutbox ]{
+    \begin{minipage}[b]{.4\textwidth}\raggedleft \tiny Leipzig Open Data
+      Initiative\\ Gefördert von der Stadt Leipzig
+  \end{minipage}}
+\end{beamercolorbox}%
+}%
+
+\title[Jugendstadtplan]{Teilprojekt Jugendstadtplan}
+
+\subtitle{Bericht zum Abschlusstreffen des Projekts\\ „Leipzig Open Data
+  Initiative“}
+
+\author[Gräbe]{Prof. Dr. Hans-Gert Gräbe}
+
+\institute[Uni Leipzig]{Leipzig Open Data Team\\
+  \texttt{http://leipzig-data.de}} 
+
+\date{Leipzig, 26. April 2013}
+\begin{document}
+\begin{frame}
+\maketitle
+\end{frame}
+\begin{frame}{Hintergrund}{}
+Teilprojekt, das sich im Sinne von Open Innovation in der Arbeit nach der
+Ideenbörse herauskristallisiert hat.\bigskip
+\begin{itemize} 
+\item \textbf{Zielstellung:} Präsentation eines Ausschnitts der verfügbaren
+  Informationen im Kontext der WorldSkills 2013 Anfang Juli 2013 in Leipzig. 
+\item \textbf{Partner:} MINT-Netzwerk Leipzig, Arbeitsgruppe, die im Auftrag
+  der Stadt Leipzig ebenfalls an einem Jugendstadtplan arbeitet. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Erreichte Ergebnisse}{}
+\begin{itemize} 
+\item Prototypische Lösung auf der Basis einer OpenStreetMap-Karte\\ $\to$
+  \url{http://leipzig-data.de/Jugendstadtplan}.
+\item Extraktion und Aufbereitung der zu MINT-Orten verfügbaren Informationen.
+\item Erste Auswertung weiterer Datenquellen, insbesondere OpenStreetmap
+  Leipzig. 
+\item Fortführung als Projektpraktikum mit einer Gruppe von Studierenden im
+  Rahmen der Lehrveranstaltung „Kreativität und Technik“ im Sommersemester
+  2013.
+\item Die Stadt Leipzig hat das Interesse bekräftigt, Informationen zu
+  MINT-Orten auch in deren Jugendstadtplan aufzunehmen.
+\end{itemize}
+\end{frame}
+\end{document}
